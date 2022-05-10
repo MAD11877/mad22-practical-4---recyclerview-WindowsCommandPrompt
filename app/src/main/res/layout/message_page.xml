@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Declare in android manifest!!!!-->
+    <LinearLayout
+        android:id = "@+id/mainButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation = "vertical">
+        <!--Try using @string resource-->
+        <Button
+            android:id = "@+id/group1Button"
+            android:layout_width = "match_parent"
+            android:layout_height = "125px"
+            android:text = 'Group1'>
+        </Button>
+        <Button
+            android:id = "@+id/group2Button"
+            android:layout_height="125px"
+            android:layout_width = "match_parent"
+            android:text = "Group2">
+        </Button>
+    </LinearLayout>
+    <!--Layering...????-->
+    <FrameLayout
+        android:id = "@+id/toggling"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation = "vertical"
+        android:gravity = "center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop = "300px" >
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

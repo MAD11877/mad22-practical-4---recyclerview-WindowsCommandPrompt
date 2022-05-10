@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--The android face with background image d-->
+    <RelativeLayout
+        android:layout_height = "match_parent"
+        android:layout_width = "match_parent"
+        android:gravity = "center"
+        android:id = "@+id/MainContainer"
+        android:orderInCategory = "1">
+        <ImageView
+            android:layout_height="550px"
+            android:layout_width = "550px"
+            android:src = "@drawable/ic_launcher_background">
+        </ImageView>
+        <ImageView
+            android:layout_height = "550px"
+            android:layout_width = "550px"
+            android:src = "@drawable/ic_launcher_foreground">
+        </ImageView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

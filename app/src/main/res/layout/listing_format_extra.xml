@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--can declare this activity in android manifest, but this will be a dead activity-->
+    <LinearLayout
+        android:id = "@+id/mainContainerTemplate"
+        android:layout_width = "match_parent"
+        android:layout_height = "1600px"
+        android:orientation = "vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="500px"
+            android:orientation="horizontal">
+            <!--Contains an RelativeLayout with 2 ImageViews and
+            another LinearLayout which contains another 2 TextViews-->
+            <RelativeLayout
+                android:layout_width="300px"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    android:src="@drawable/ic_launcher_background"></ImageView>
+
+                <ImageView
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    android:src="@drawable/ic_launcher_foreground"></ImageView>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameHolderExtra"
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:gravity="center_vertical"
+                    android:textSize="90px"></TextView>
+
+                <TextView
+                    android:id="@+id/descriptionHolderExtra"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="50px"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <!--Insert another image view here-->
+        <RelativeLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "fill_parent"
+            android:gravity = "center">
+            <ImageView
+                android:src = "@drawable/ic_launcher_background"
+                android:layout_width = "1000px"
+                android:layout_height = "1000px">
+            </ImageView>
+            <ImageView
+                android:layout_width="1000px"
+                android:layout_height="1000px"
+                android:src = "@drawable/ic_launcher_foreground">
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

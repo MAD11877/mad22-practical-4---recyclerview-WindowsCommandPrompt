@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--There must be an image here-->
+    <!-- tools:ignore = "MissingConstraints" is the last resort-->
+    <ScrollView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--Main flex container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation = "vertical">
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:gravity = "center"
+                android:layout_marginTop = "32dp"
+                >
+                <RelativeLayout
+                    android:layout_width = "500px"
+                    android:layout_height = "500px"
+                    >
+                    <ImageView
+                        android:id="@+id/android_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_background"></ImageView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_foreground"></ImageView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_foreground" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--Hello World bold text here-->
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop = "8dp"
+                android:text=""
+                android:textSize = "36sp"
+                android:gravity = "center"
+                android:textStyle = "bold"
+                />
+            <!--Placeholder text-->
+            <TextView
+                android:id = "@+id/Description"
+                android:layout_marginTop = "100px"
+                android:layout_width = "match_parent"
+                android:layout_height = "500px"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text = ""
+                android:textSize = "65px"
+                android:gravity = "center"
+                />
+            <!--Main container for the 2 buttons-->
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "250px"
+                android:orientation = "horizontal"
+                android:gravity = "center"
+                android:layout_marginTop = "16dp">
+                <Button
+                    android:id="@+id/button_no1"
+                    android:layout_width="0dp"
+                    android:layout_height="150px"
+                    android:gravity="center"
+                    android:text="unfollow"
+                    android:textSize="35px"
+                    android:layout_weight = "1"/>
+                <Button
+                    android:id = "@+id/button_no2"
+                    android:layout_width = "0dp"
+                    android:layout_height = "150px"
+                    android:gravity = "center"
+                    android:layout_weight = "1"
+                    android:text = "Message"
+                    android:textSize = "40px"
+                    android:layout_marginLeft = "250px"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
