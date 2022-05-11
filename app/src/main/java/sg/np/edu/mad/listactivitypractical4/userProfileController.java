@@ -63,11 +63,11 @@ public class userProfileController extends AppCompatActivity {
         followUnfollowButton.setOnClickListener(thenFunctionAs -> {
             if ((followUnfollowButton.getText()).equals("Follow")){
                 followUnfollowButton.setText("Unfollow");
-                Toast.makeText(this, "Unfollowed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Followed", Toast.LENGTH_SHORT).show();
             }
             else{
                 followUnfollowButton.setText("Follow");
-                Toast.makeText(this, "Followed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Unfollowed", Toast.LENGTH_SHORT).show();
             }
         });
     }
