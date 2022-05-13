@@ -42,8 +42,10 @@ public class userProfileController extends AppCompatActivity {
         ArrayList<User> userList = lap4.userList;
 
         //Initialise the buttons...
+        /* 
         Log.d(TAG, userList.toString());
         Log.d(TAG, Integer.toString(userList.size()));
+        */ 
 
         for (int i = 0; i < userList.size(); i++){
             if(userList.get(i).getFollowed()){
@@ -59,14 +61,19 @@ public class userProfileController extends AppCompatActivity {
             andThenRedirect.setClassName("sg.np.edu.mad.listactivitypractical4", "sg.np.edu.mad.listactivitypractical4.MessagePage");
             startActivity(andThenRedirect);
         });
-
+        
+        Log.d(TAG, "Before: " + Boolean.toString(userList.get(whiteHole.getIntExtra("ViewHolderIndex", 0)).getFollowed()));  //returns old boolean value of whether the person followed or unfollowed
         followUnfollowButton.setOnClickListener(thenFunctionAs -> {
             if ((followUnfollowButton.getText()).equals("Follow")){
                 followUnfollowButton.setText("Unfollow");
+                userList.get(whiteHole.getIntExtra("ViewHolderIndex", 0)).setFollowed(false);
+                Log.d(TAG, "After: " + Boolean.toString(userList.get(whiteHole.getIntExtra("ViewHolderIndex", 0)).getFollowed())); //returns new boolean value of the person has followed or unfollowed, should give false. 
                 Toast.makeText(this, "Followed", Toast.LENGTH_SHORT).show();
             }
             else{
                 followUnfollowButton.setText("Follow");
+                userList.get(whiteHole.getIntExtra("ViewHolderIndex", 0)).setFollowed(true);
+                Log.d(TAG, "After: " + Boolean.toString(userList.get(whiteHole.getIntExtra("ViewHolderIndex", 0)).getFollowed())); //returns new boolean value of the person has followed or unfollowed, should give true. 
                 Toast.makeText(this, "Unfollowed", Toast.LENGTH_SHORT).show();
             }
         });
