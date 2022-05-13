@@ -98,6 +98,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
             //funny thing is why is not called 'setOnTapListener'???
             vh.VH_LL.setOnClickListener(function -> {
+                int pos = position; 
                 AlertDialog.Builder messageConstructor = new AlertDialog.Builder(context);
                 messageConstructor
                     .setTitle("Profile")
@@ -112,6 +113,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                                 Intent teleporter = new Intent();
                                 teleporter.putExtra("NameString", nameID);
                                 teleporter.putExtra("DescString", descID);
+                                teleporter.putExtra("ViewHolderIndex", pos); 
                                 teleporter.setClassName("sg.np.edu.mad.listactivitypractical4", "sg.np.edu.mad.listactivitypractical4.userProfileController");
                                 context.startActivity(teleporter);
                             }
@@ -137,6 +139,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             vhe.dhe.setText(userList.get(position).getDescID());
 
             vhe.VHE_LL.setOnClickListener(function -> {
+                int pos = position; 
                 //Build the message...
                 AlertDialog.Builder messageBuilder = new AlertDialog.Builder(context);
                 messageBuilder
@@ -152,6 +155,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                             Intent teleporter = new Intent();
                             teleporter.putExtra("NameString", nameID);
                             teleporter.putExtra("DescString", descID);
+                            teleporter.putExtra("ViewHolderIndex", pos); 
                             teleporter.setClassName("sg.np.edu.mad.listactivitypractical4", "sg.np.edu.mad.listactivitypractical4.userProfileController");
                             context.startActivity(teleporter);
                         }
